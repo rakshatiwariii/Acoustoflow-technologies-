@@ -1,5 +1,6 @@
 streamlit
-torch
 numpy
 pandas
 matplotlib
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
