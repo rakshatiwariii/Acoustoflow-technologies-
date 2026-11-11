@@ -9,13 +9,23 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom Styling for Elegant Executive Look
+# Custom Styling with Fixed High-Contrast Text for Metrics
 st.markdown("""
     <style>
     .main { background-color: #f8f9fa; }
     h1 { color: #0F2A4A; font-family: 'Helvetica Neue', sans-serif; }
     h2, h3 { color: #008080; }
-    .stMetric { background-color: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    
+    /* Fixed Metric Card Styling with High-Contrast Dark Text */
+    .stMetric { 
+        background-color: #ffffff !important; 
+        padding: 15px !important; 
+        border-radius: 8px !important; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important; 
+    }
+    .stMetric label { color: #495057 !important; font-weight: 600 !important; }
+    .stMetric [data-testid="stMetricValue"] { color: #0F2A4A !important; font-weight: 700 !important; }
+    .stMetric [data-testid="stMetricDelta"] { color: #008080 !important; font-weight: 600 !important; }
     </style>
 """, unsafe_allow_html=True)
 
